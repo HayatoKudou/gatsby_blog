@@ -37,9 +37,10 @@ const Tags = ({ data }) => {
               <h1 className="titleSeparate">#Tags</h1>
             </div>
             <Row gutter={[30, 20]}>
-              {
+              {                
                 edges.map((val) => (
                   <Col key={val.node.name} xs={24} sm={24} md={12} lg={8}>
+                      {console.log(val)}
                     <TagCard
                       img={val.node.childImageSharp.fluid.src}
                       name={val.node.name}

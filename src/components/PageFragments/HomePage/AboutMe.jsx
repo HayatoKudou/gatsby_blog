@@ -6,16 +6,13 @@ import { stripTags, domHtml } from '../../../utils/stripTags';
 import SEO from '../../Seo';
 
 const pageText = {
-  paraOne: `Hello !! My name is Rolwin Reevan Monteiro. I'm a full stack web developer who is
-    passionate about various web technologies. I like to experiment with different web
-    technologies. I have an experience of nearly 3 years working with LAMP stack, MERN stack
-    and ELK stack. Building fancy UI's just like this one that your seeing 😅 and writing blogs about tech stacks
-    is what Rolwin loves to do. Check my blog which I update every week for some Javascript and some
-    cool notes on web technologies.`,
-  paraTwo: `Currently I work mostly with Javascript technologies like ReactJS and NodeJS. I also
-    have hands on experience working with cloud infrastructures like <b>AWS/GCP</b> and have deployed applications
-    keeping scalability in mind. Docker, Kubernetes, Jenkins, SonarQube are some of the cool
-    tools I use for <b>CI/ CD</b>. I'm always a learner and a self taught programmer.`,
+  paraOne: `はじめまして!私は都内にある受託系企業でwebエンジニアをしています。
+  メイン言語はPHPでLaravel・Reactを使用することが多いです。
+  担当箇所は、詳細設計・実装・テスト・保守で、これまでwebサイト・HRTech・認証基盤などの開発に携わり、少人数でのスクラッチ開発、アジャイル開発をしてきました。
+  最近はSPAのサイトを作ってみたく、プライベートでReactなどのフロント言語を勉強中です。
+  `,
+  paraTwo: `2018.4.   新卒でSES系企業に入社、クラウドの監視業務を担当
+  2019.11.   受託系企業に入社、web開発業務を担当`,
 };
 
 const AboutMe = () => {
@@ -27,9 +24,9 @@ const AboutMe = () => {
           title="About"
           description={description}
           path=""
-          keywords={['Rolwin', 'Reevan', 'Monteiro', 'FullStack developer', 'Javascript', 'ReactJS', 'NodeJS', 'Gatsby']}
+          keywords={['Web', 'Javascript', 'React', 'FullStack developer', 'Redux', 'jQuery', 'PHP', 'Laravel']}
         />
-        <h1 className="titleSeparate">About Me</h1>
+        <h1 className="titleSeparate">自己紹介</h1>
         <p>
           {pageText.paraOne}
         </p>

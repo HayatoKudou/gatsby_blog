@@ -72,27 +72,27 @@ module.exports = [
       javascriptEnabled: true,
     },
   },
-  {
-    resolve: 'gatsby-plugin-eslint-v2',
-    options: {
-      test: /\.js$|\.jsx$/,
-      exclude: /(node_modules|.cache|public)/,
-      stages: ['develop'],
-      options: {
-        emitWarning: true,
-        failOnError: false,
-      },
-    },
-  },
-  {
-    resolve: 'gatsby-plugin-google-analytics',
-    options: {
-      // The property ID; the tracking code won't be generated without it
-      trackingId: config.googleAnalyticTrackingId,
-      // Defines where to place the tracking script - `true` in the head and `false` in the body
-      head: false,
-    },
-  },
+//   {
+//     resolve: 'gatsby-plugin-eslint-v2',
+//     options: {
+//       test: /\.js$|\.jsx$/,
+//       exclude: /(node_modules|.cache|public)/,
+//       stages: ['develop'],
+//       options: {
+//         emitWarning: true,
+//         failOnError: false,
+//       },
+//     },
+//   },
+//   {
+//     resolve: 'gatsby-plugin-google-analytics',
+//     options: {
+//       // The property ID; the tracking code won't be generated without it
+//       trackingId: config.googleAnalyticTrackingId,
+//       // Defines where to place the tracking script - `true` in the head and `false` in the body
+//       head: false,
+//     },
+//   },
   {
     resolve: 'gatsby-plugin-nprogress',
     options: {

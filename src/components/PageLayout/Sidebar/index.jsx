@@ -12,7 +12,7 @@ import Config from '../../../../config';
 
 const { Content } = Layout;
 const {
-  facebook, github, instagram, twitter,
+  github, qiita, twitter,
 } = Config.social;
 
 const DomContent = () => (
@@ -21,17 +21,14 @@ const DomContent = () => (
     <div className={`${style.name} centerAlign`}>
       <div className={`${style.boxName} centerAlign`}>
         <h2>
-          Rolwin
-          {' '}
-          <span>Reevan</span>
+          <span>Hayato Kudo</span>
         </h2>
       </div>
-      <div className={`${style.badge} ${style.badgeGray}`}>Software Engineer</div>
+      <div className={`${style.badge} ${style.badgeGray}`}>WEBエンジニア</div>
       <div className="centerAlign box">
-        <a href={facebook} target="_blank" label="button" rel="noopener noreferrer"><FA name="facebook-f" /></a>
         <a href={twitter} target="_blank" label="button" rel="noopener noreferrer"><FA name="twitter" /></a>
         <a href={github} target="_blank" label="button" rel="noopener noreferrer"><FA name="github" /></a>
-        <a href={instagram} target="_blank" label="button" rel="noopener noreferrer"><FA name="instagram" /></a>
+        <a href={qiita} target="_blank" label="button" rel="noopener noreferrer"><FA name="search" /></a>
       </div>
       <ul className={`box ${style.badge} contactBlock`}>
         <li className={`${style.contactBlockItem}`}>
@@ -39,12 +36,12 @@ const DomContent = () => (
             <FeatherIcon size="19" icon="calendar" />
             {' '}
           </span>
-&nbsp; &nbsp; May 9,1995
+&nbsp; &nbsp; 1999年生まれ
         </li>
         <li className={`${style.contactBlockItem}`}>
           <span><FeatherIcon size="19" icon="map-pin" /></span>
           {' '}
-&nbsp; &nbsp; Bangalore, India
+&nbsp; &nbsp; Japan, Tokyo
         </li>
         <li className={`${style.contactBlockItem}`}>
           <span><FeatherIcon size="19" icon="mail" /></span>
