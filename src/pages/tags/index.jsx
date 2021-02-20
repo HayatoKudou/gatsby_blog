@@ -39,7 +39,7 @@ const Tags = ({ data }) => {
             <Row gutter={[30, 20]}>
               {                
                 edges.map((val) => (
-                    'description' in tagData[val.node.name] && 
+                    tagData[val.node.name] && 
                         <Col key={val.node.name} xs={24} sm={24} md={12} lg={8}>
                         <TagCard
                           img={val.node.childImageSharp.fluid.src}
