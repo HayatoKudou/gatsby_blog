@@ -43,8 +43,8 @@ const Tags = ({ data }) => {
                     <TagCard
                       img={val.node.childImageSharp.fluid.src}
                       name={val.node.name}
-                      description={tagData[val.node.name].description ? tagData[val.node.name].description : ''}
-                      color={tagData[val.node.name].color}
+                      description={tagData[val.node.name] ? tagData[val.node.name].description : ''}
+                      color={tagData[val.node.name] ? tagData[val.node.name].color : ''}
                     />
                   </Col>
                 ))
