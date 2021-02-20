@@ -23,26 +23,30 @@ module.exports = {
     contactFormUrl: process.env.CONTACT_FORM_ENDPOINT || 'https://getform.io/f/ea56414c-1ebc-4b48-bfe4-7b6d28d1b812',
     googleAnalyticTrackingId: process.env.GA_TRACKING_ID || '',
     tags: {
-      javascript: {
-        name: 'javascript',
+      JavaScript: {
+        name: 'JavaScript',
         description: 'JavaScriptは、HTMLやCSSと並んでWebページに機能を持たせるために使われるオブジェクト指向プログラミング言語です。',
         color: '#f0da50',
-      },
-      reactjs: {
-        name: 'reactjs',
-        description: 'Reactは、ユーザーインターフェイスの設計に使われるオープンソースのJavaScriptライブラリです。',
-        color: '#61dbfa',
       },
       Laravel: {
         name: 'Laravel',
         description: 'Laravelは、MVCのWebアプリケーション開発用の無料・オープンソースのPHPで書かれたWebアプリケーションフレームワークです。',
         color: '#f9c646',
       },
-      php: {
-        name: 'php',
+      PHP: {
+        name: 'PHP',
         description: 'PHPは特にサーバーサイドで動的なウェブページを作成するための機能を多く備えている、オープンソースの汎用スクリプト言語です。',
         color: '#474A8A',
       },
-  
+      React: {
+        name: 'React',
+        description: 'Reactは、ユーザーインターフェイスの設計に使われるオープンソースのJavaScriptライブラリです。',
+        color: '#61dbfa',
+      },
+      Unity: {
+        name: 'Unity',
+        description: 'Unity（Unity3D）は、IDEを内蔵するゲームエンジンです。',
+        color: '#000000',
+      },      
     },
   };

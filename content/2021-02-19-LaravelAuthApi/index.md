@@ -1,7 +1,7 @@
 ---
 title: "LaravelでトークンベースのAPI認証"
 path: blog/LaravelAuthApi
-tags: [Laravel, php]
+tags: [Laravel, PHP]
 cover: ./Laravel.png
 date: 2021-02-11
 excerpt: Laravel標準のapi guardを使用しトークンベースのAPI認証を実装してみた！
