@@ -2,7 +2,7 @@
 title: "react-unity-webglでReact × Unityを動かす方法"
 path: blog/reactUnity
 tags: [JavaScript, React, Unity]
-cover: ./reactjs.jpg
+cover: ./React.jpg
 date: 2021-02-08
 excerpt: react-unity-webglライブラリを使用し、React上でUnityを動かしてみた！
 ---
