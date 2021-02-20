@@ -27,8 +27,8 @@ const Tags = ({ data }) => {
         <Header />
         <SEO
           title="Tags"
-          description="This page consists of various Tags on various technologies that I'll be using
-          to write blogs. You can check the blogs related to the tags by clicking on any of the tags below."
+          description="このページでは、私が使っている様々な技術に関するタグを構成しています。
+          以下タグのいずれかをクリックすることで、関連するブログを確認することができます。"
           path="tags"
         />
         <SidebarWrapper>

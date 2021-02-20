@@ -20,28 +20,28 @@ module.exports = {
       qiita: 'https://qiita.com/metal_kentucky',
       rss: '/rss.xml',
     },
-    contactFormUrl: process.env.CONTACT_FORM_ENDPOINT || 'https://getform.io/f/09a3066f-c638-40db-ad59-05e4ed71e451',
+    contactFormUrl: process.env.CONTACT_FORM_ENDPOINT || 'https://getform.io/f/ea56414c-1ebc-4b48-bfe4-7b6d28d1b812',
     googleAnalyticTrackingId: process.env.GA_TRACKING_ID || '',
     tags: {
       javascript: {
         name: 'javascript',
-        description: 'JavaScript is an object-oriented programming language used alongside HTML and CSS to give functionality to web pages.',
+        description: 'JavaScriptは、HTMLやCSSと並んでWebページに機能を持たせるために使われるオブジェクト指向プログラミング言語です。',
         color: '#f0da50',
       },
       reactjs: {
         name: 'reactjs',
-        description: 'React is an open source JavaScript library used for designing user interfaces.',
+        description: 'Reactは、ユーザーインターフェイスの設計に使われるオープンソースのJavaScriptライブラリです。',
         color: '#61dbfa',
       },
       Laravel: {
         name: 'Laravel',
-        description: 'A general purpose programming language that is widely used for developing various applications.',
+        description: 'Laravelは、MVCのWebアプリケーション開発用の無料・オープンソースのPHPで書かれたWebアプリケーションフレームワークです。',
         color: '#f9c646',
       },
       php: {
-        name: 'Laravel',
-        description: 'A general purpose programming language that is widely used for developing various applications.',
-        color: '#f9c646',
+        name: 'php',
+        description: 'PHPは特にサーバーサイドで動的なウェブページを作成するための機能を多く備えている、オープンソースの汎用スクリプト言語です。',
+        color: '#474A8A',
       },
   
     },
