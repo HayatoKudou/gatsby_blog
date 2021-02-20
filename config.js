@@ -38,6 +38,11 @@ module.exports = {
         description: 'A general purpose programming language that is widely used for developing various applications.',
         color: '#f9c646',
       },
+      php: {
+        name: 'Laravel',
+        description: 'A general purpose programming language that is widely used for developing various applications.',
+        color: '#f9c646',
+      },
   
     },
   };

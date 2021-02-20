@@ -23,7 +23,7 @@ export default () => {
 
     fetch(Config.contactFormUrl, { method: 'POST', body: formData })
       .then(() => {
-        message.success('Thank you for your kind response 🙂. Will get back to you.');
+        message.success('お問い合わせいただきありがとうございます🙂 折り返しご連絡いたします。');
         form.resetFields();
       })
       // eslint-disable-next-line no-console
