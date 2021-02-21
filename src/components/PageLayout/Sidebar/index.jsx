@@ -20,7 +20,7 @@ const DomContent = () => (
     <div className={style.profileAvatar} />
     <div className={`${style.name} centerAlign`}>
       <div className={`${style.boxName} centerAlign`}>
-        <h2>
+        <h2 className="myname">
           <span>Hayato Kudo</span>
         </h2>
       </div>

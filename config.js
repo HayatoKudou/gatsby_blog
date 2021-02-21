@@ -47,6 +47,11 @@ module.exports = {
         name: 'Unity',
         description: 'Unity（Unity3D）は、IDEを内蔵するゲームエンジンです。',
         color: '#000000',
-      },      
+      },
+      Linux: {
+        name: 'Linux',
+        description: 'Linuxは、オープンソースのオペレーティングシステム (OS) および IT インフラ基盤です。',
+        color: '#000000',
+      },
     },
   };
