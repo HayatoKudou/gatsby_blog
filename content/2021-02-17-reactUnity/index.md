@@ -10,7 +10,7 @@ excerpt: react-unity-webglライブラリを使用し、React上でUnityを動�
 ## 目的
 
 UnityをWebGL形式で出力し、react-unity-webglライブラリを使ってReact上で動かす。
-> 完成図: [2Dアクションゲームサンプル](https://kudohayatoblog.com/blog/reactUnity_sample){:target="_blank"}
+> 完成図: [2Dアクションゲームサンプル](https://verification.kudohayatoblog.com/blog/reactUnity_sample)(音量注意)
 
 ## 使用環境
 
@@ -31,7 +31,7 @@ UnityをWebGL形式で出力し、react-unity-webglライブラリを使ってRe
     $ npm install react-unity-webgl@6.x  # For Unity 2017 (LTS)
     $ npm install react-unity-webgl@5.x  # For Unity 5.6 (LTS)
     ```
-    > 参考: [公式GitHub](https://github.com/elraccoone/react-unity-webgl){:target="_blank"}
+    > 参考: [公式GitHub](https://github.com/elraccoone/react-unity-webgl)
 
 2. ### UnityをWebGL形式でビルド
 
@@ -39,7 +39,7 @@ UnityをWebGL形式で出力し、react-unity-webglライブラリを使ってRe
     * Platformから「WebGL」を選択し、Switch Platformを押す。
     * ビルド対象シーンを選択し、Build実行
     <br>
-    > 参考: [【unity】WebGLビルド方法 - naichi's lab](https://blog.naichilab.com/entry/2017/04/29/125527){:target="_blank"}
+    > 参考: [【unity】WebGLビルド方法 - naichi's lab](https://blog.naichilab.com/entry/2017/04/29/125527)
 
     ビルドされたディレクトリから、「Build」ディレクトリを確認してください。<br>
     画像のような構造になっているかと思います。<br>
