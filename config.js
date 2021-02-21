@@ -21,7 +21,7 @@ module.exports = {
       rss: '/rss.xml',
     },
     contactFormUrl: process.env.CONTACT_FORM_ENDPOINT || 'https://getform.io/f/ea56414c-1ebc-4b48-bfe4-7b6d28d1b812',
-    googleAnalyticTrackingId: process.env.GA_TRACKING_ID || 'G-RCEGJMBE9R',
+    googleAnalyticTrackingId: process.env.GA_TRACKING_ID || 'UA-190311961-1',
     tags: {
       JavaScript: {
         name: 'JavaScript',
