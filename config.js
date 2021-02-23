@@ -5,7 +5,7 @@ module.exports = {
     siteDescription: 'WEBエンジニアのブログ',
     author: 'Hayato Kudo',
     postsForArchivePage: 3,
-    defaultLanguage: 'en',
+    defaultLanguage: 'ja',
     disqusScript: process.env.DISQUS_SCRIPT || 'https://rolwinreevan.disqus.com/embed.js',
     pages: {
       home: '/',
@@ -53,5 +53,10 @@ module.exports = {
         description: 'Linuxは、オープンソースのオペレーティングシステム (OS) および IT インフラ基盤です。',
         color: '#000000',
       },
+      GCP: {
+        name: 'GCP',
+        description: 'GCP (Google Cloud Platform) は、Googleが提供しているクラウドコンピューティングサービスです。',
+        color: '#45a2e6',
+      },      
     },
   };
