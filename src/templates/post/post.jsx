@@ -19,6 +19,11 @@ const Post = ({ data }) => {
     title, cover: { childImageSharp: { fluid } }, excerpt, path,
   } = frontmatter;
 
+  var tags_name = [];
+  for(let key in Config.tags){
+    tags_name.push(key);
+  }
+
   const canonicalUrl = Utils.resolvePageUrl(
     Config.siteUrl,
     Config.pathPrefix,
@@ -31,7 +36,7 @@ const Post = ({ data }) => {
           title={title}
           description={excerpt}
           path={path}
-          keywords={['Rolwin', 'Reevan', 'Monteiro', 'FullStack developer', 'Javascript', 'ReactJS', 'NodeJS', 'Gatsby', 'technology']}
+          keywords={tags_name}
         />
         <Header />
         <SidebarWrapper>
