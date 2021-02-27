@@ -26,6 +26,10 @@ body{
 }
 
 @media screen and (max-width:480px) {
+    .root {
+        background-color: black;
+    }
+
     .word{
         padding: 15px !important;
     }

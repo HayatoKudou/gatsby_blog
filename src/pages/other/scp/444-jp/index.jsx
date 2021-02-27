@@ -1,4 +1,5 @@
 import React, {useEffect, useState, useRef, createRef} from 'react';
+import SEO from '../../../../components/Seo';
 import { Layout, Row, Col } from 'antd';
 import style from './444-jp.module.css';
 import First from "../../../../images/scp/444-jp-1.jpg"
@@ -97,7 +98,12 @@ SCP-444-JP被験者、元被験者、それらの手によって殺害された�
     }
 
     return (
-        <div>
+        <div className={style.root}>
+            <SEO
+              title="SCP-444-JP"
+              description="SCP-444-JP"
+              path="scp"
+            />
             <p className={style.word}>
                 {word_1}
             </p>
