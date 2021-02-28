@@ -50,23 +50,29 @@ SCP-444-JP被験者、元被験者、それらの手によって殺害された�
     const section2 = useRef('');
     const bottom = useRef('');
 
-    const [count, setCount] = useState(0);
     const [word_1, set_word_1] = useState('');
     const [word_2, set_word_2] = useState('');
     const [showFlag, set_showFlag] = useState(true);
 
     let index = 0;
     let index2 = 0;    
+    var timer;
+    var timer2;
 
     useEffect(() => {
         // const uttr = new SpeechSynthesisUtterance("Hello World!");
         // window.speechSynthesis.speak(uttr);
         readWord('section1');
+        return () => {
+            // Unmount時の処理を記述
+            clearTimeout(timer);
+            clearTimeout(timer2);
+        };
     }, [])
 
     function readWord(name){
         if(name === 'section1'){
-            const timer = setInterval(() => {
+            timer = setInterval(() => {
                 if(index === Explanation_1.length+1){
                     scroll('section1');
                     set_showFlag(false);
@@ -77,7 +83,7 @@ SCP-444-JP被験者、元被験者、それらの手によって殺害された�
                 set_word_1(Explanation_1.substring(0, index++))
             }, 60)
         } else if(name === 'section2'){
-            const timer2 = setInterval(() => {
+            timer2 = setInterval(() => {
                 if(index2 === Explanation_2.length+1){                    
                     clearInterval(timer2);                    
                     return;

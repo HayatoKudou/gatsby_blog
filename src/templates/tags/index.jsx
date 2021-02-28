@@ -15,6 +15,7 @@ import SidebarWrapper from '../../components/PageLayout/Sidebar';
 import Config from '../../../config';
 import Utils from '../../utils/pageUtils';
 import style from './tags.module.less';
+import Guide from '../../components/PageLayout/Guide';
 
 const TagPage = ({ data, pageContext }) => {
   const { tag } = pageContext;
@@ -55,6 +56,7 @@ const TagPage = ({ data, pageContext }) => {
             ))}
           </Row>
         </SidebarWrapper>
+        <Guide />
       </Layout>
     </Layout>
   );

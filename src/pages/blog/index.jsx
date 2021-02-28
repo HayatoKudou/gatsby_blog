@@ -7,6 +7,7 @@ import Header from '../../components/PageLayout/Header';
 import SidebarWrapper from '../../components/PageLayout/Sidebar';
 import PostCard from '../../components/PostCard';
 import SEO from '../../components/Seo';
+import Guide from '../../components/PageLayout/Guide';
 
 const Blog = ({ data }) => (
   <Layout className="outerPadding">
@@ -32,6 +33,7 @@ const Blog = ({ data }) => (
           }
         </Row>
       </SidebarWrapper>
+      <Guide />
     </Layout>
   </Layout>
 );

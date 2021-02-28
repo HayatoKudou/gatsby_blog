@@ -8,6 +8,7 @@ import SEO from '../../components/Seo';
 import Comment from '../../components/Comment';
 import Config from '../../../config';
 import Utils from '../../utils/pageUtils';
+import Guide from '../../components/PageLayout/Guide';
 
 import 'prismjs/themes/prism-solarizedlight.css';
 import './highlight-syntax.less';
@@ -49,6 +50,7 @@ const Post = ({ data }) => {
             <Comment pageCanonicalUrl={canonicalUrl} pageId={title} />
           </div>
         </SidebarWrapper>
+        <Guide />
       </Layout>
     </Layout>
   );
