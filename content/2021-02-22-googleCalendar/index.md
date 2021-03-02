@@ -4,7 +4,7 @@ path: blog/googleCalendar
 tags: [PHP, Laravel, GCP]
 cover: ./Laravel.png
 date: 2021-02-23
-excerpt: LaravelでGoogle Calendarの変更を監視
+excerpt: LaravelでGoogle Calendarの変更を監視してみた！
 ---
 
 ## 目的

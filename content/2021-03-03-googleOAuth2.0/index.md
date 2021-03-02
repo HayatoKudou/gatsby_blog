@@ -4,7 +4,7 @@ path: blog/googleOAuth2.0
 tags: [PHP, Laravel, GCP]
 cover: ./Laravel.png
 date: 2021-03-03
-excerpt: LaravelでGoogle OAuth2.0認証
+excerpt: LaravelでGoogle OAuth2.0認証してみた！
 ---
 
 ## 目的
@@ -20,8 +20,6 @@ LaravelでGoogle OAuth2.0認証をする。
 ## 準備
 
 - httpsサーバー(自己証明書は不可)
-- Googleカレンダーアカウント
-
 
 ## 手順
 
@@ -87,7 +85,7 @@ LaravelでGoogle OAuth2.0認証をする。
 
     「fetchAccessTokenWithAuthCode」をすることで、このようなデータを取得できます。<br>
     ここで気をつけるべきは、アクセストークンの設定をトークン部分のみにすると、有効期限チェックでエラーが発生してしまうということです。<br>
-    有効期限のチェックは expires_in を参照しているため、「fetchAccessTokenWithAuthCode」で取得したデータごとJSONに整形して設定しましょう。<br>
+    有効期限のチェックは expires_in を参照しているため、トークン部分のみだと「Undefined index: expires_in」とエラーが吐かれてしまいます。「fetchAccessTokenWithAuthCode」で取得したデータごとJSONに整形して設定しましょう。<br>
     (有効期限チェックをしない場合は、トークン部分のみでも可能です。)
 
     ```
