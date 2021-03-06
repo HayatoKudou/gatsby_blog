@@ -1,15 +1,18 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { navigate } from "gatsby"  
+import { navigate } from "gatsby"
 import Hiiro from '../../../images/scp/444-jp.png';
+import Nekodesu from '../../../images/scp/040-jp.jpeg';
 import style from './guide.module.less';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import ClearIcon from '@material-ui/icons/Clear';
 
 export default function Guide() {
 
     const intervalRef = useRef(null);
 
+    const [pick_char, set_pick_char] = useState('');
+    const [show, set_show] = useState(true);
     const [word, set_word] = useState('');
-    const [show, set_show] = useState(false);
     const [progress, setProgress] = useState(0);
     const [flag, setFlag] = useState(false);
 
@@ -21,9 +24,16 @@ export default function Guide() {
     url = url + monthDay;
     var pageid = [];
 
+
     useEffect(() => {
+        radomPick();
         interval();
     }, []);
+
+    function radomPick(){
+        const no = get_random(1, 2);
+        set_pick_char(no);
+    }
 
     function interval(){
         const timer = setInterval(() => {
@@ -32,14 +42,12 @@ export default function Guide() {
         }, 60000)
     }
 
-    function get_random(){
-        var min = 1;
-        var max = 3;
+    function get_random(min, max){
          return Math.floor( Math.random() * (max + 1 - min) ) + min ;
     }
 
     function select_word(){
-        var random = get_random();
+        var random = get_random(1, 3);
         switch (random) {
             case 1:
                 getWiki();
@@ -93,20 +101,28 @@ export default function Guide() {
 
     let n = 1;
 
-    const mouseOver = useCallback(() => {
+    const mouseOver = () => {
         if (intervalRef.current !== null) {
             return;
         }
         intervalRef.current = setInterval(() => {
             n++;
-            set_word('Thank you See you');
-            if(n == 100){
-                clearInterval(intervalRef.current);
-                navigate('/other/scp/444-jp')
+            if(pick_char == 1){
+                set_word('Thank you See you');
+                if(n == 100){
+                    clearInterval(intervalRef.current);
+                    navigate('/other/scp/444-jp');
+                }
+            } else if(pick_char == 2 ){
+                set_word('こんにちは ねこです');
+                if(n == 100){
+                    clearInterval(intervalRef.current);
+                    navigate('/other/scp/040-jp')
+                }
             }
             setProgress(n);
         }, 30);
-    }, []);
+    };
 
     const mouseOut = useCallback(() => {
         n = 0;
@@ -121,15 +137,22 @@ export default function Guide() {
 
     return (
         <div className={style.root}>
-            {word != '' && (
+            {(show && word != '') && (
                 <div className={style.balloon}>
                     <p>{word}</p>
                 </div>
             )}
-            <div className={style.image_form}>
-                <img className={style.image_icon} src={Hiiro} alt="scp-444-jp" onMouseOver={mouseOver} onMouseOut={mouseOut} />
-                <LinearProgress variant="determinate" value={progress} className={progress == 0 ? style.none : style.flex } />
-            </div>
+            {show && (
+                <div className={style.image_form}>
+                    <ClearIcon className={style.image_clear} fontSize="small" onClick={() => set_show(false)} />
+                    {pick_char == 1 ?
+                        (<img className={style.image_icon} src={Hiiro} alt="scp-444-jp" onMouseOver={mouseOver} onMouseOut={mouseOut} />)
+                    : pick_char == 2 ?
+                        (<img className={style.image_icon} src={Nekodesu} alt="scp-040-jp" onMouseOver={mouseOver} onMouseOut={mouseOut} />)
+                    : ''}
+                    <LinearProgress variant="determinate" value={progress} className={progress == 0 ? style.none : style.flex } />
+                </div>
+            )}
         </div>
     );
 };
