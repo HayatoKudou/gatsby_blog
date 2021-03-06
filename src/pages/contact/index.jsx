@@ -4,6 +4,7 @@ import Header from '../../components/PageLayout/Header';
 import SidebarWrapper from '../../components/PageLayout/Sidebar';
 import ContactForm from '../../components/PageFragments/ContactForm';
 import SEO from '../../components/Seo';
+import Guide from '../../components/PageLayout/Guide';
 
 const Contact = () => (
   <Layout className="outerPadding">
@@ -31,6 +32,7 @@ const Contact = () => (
           <ContactForm />
         </Row>
       </SidebarWrapper>
+      <Guide />
     </Layout>
   </Layout>
 );

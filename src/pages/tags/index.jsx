@@ -10,6 +10,7 @@ import SEO from '../../components/Seo';
 import SidebarWrapper from '../../components/PageLayout/Sidebar';
 import TagCard from '../../components/TagCard';
 import Config from '../../../config';
+import Guide from '../../components/PageLayout/Guide';
 
 const Tags = ({ data }) => {
   const { allFile: { edges } } = data;
@@ -53,6 +54,7 @@ const Tags = ({ data }) => {
             </Row>
           </>
         </SidebarWrapper>
+        <Guide />
       </Layout>
     </Layout>
   );

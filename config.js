@@ -57,6 +57,11 @@ module.exports = {
         name: 'GCP',
         description: 'GCP (Google Cloud Platform) は、Googleが提供しているクラウドコンピューティングサービスです。',
         color: '#45a2e6',
-      },      
+      },
+      Apache: {
+        name: 'Apache',
+        description: 'Apacheは、世界中で使用されているWebサーバーソフトウェア(HTTPサーバー)です。',
+        color: '#cc2336',
+      },
     },
   };
