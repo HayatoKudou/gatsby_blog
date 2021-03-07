@@ -15,8 +15,9 @@ const Blog = ({ data }) => (
       <Header />
       <SEO
         title="Blog"
-        description="php・javascriptを中心に、web関連の技術をブログにしています。"
+        description="駆け出しエンジニアが、PHP・JavaScriptを中心に、WEB関連の技術をブログで発信しています。"
         path="blog"
+        keywords={['駆け出しエンジニア', 'エンジニア', 'ブログ', 'PHP', 'Laravel', 'Javascript', 'ReactJS']}
       />
       <SidebarWrapper>
         <div className="marginTopTitle">

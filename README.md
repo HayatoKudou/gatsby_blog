@@ -1,3 +1,9 @@
+## このソースはGastbyスターターをベースに作成しています。
+
+[参照元](https://github.com/rolwin100/rolwinreevan_gatsby_blog)<br>
+
+Thank you Rolwin!😚
+
 ## クイックスタート
 
 1.  プロジェクトを複製し、依存関係パッケージをインストールします。

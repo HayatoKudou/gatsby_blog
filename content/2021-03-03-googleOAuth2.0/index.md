@@ -88,7 +88,7 @@ LaravelでGoogle OAuth2.0認証をする。
     有効期限のチェックは expires_in を参照しているため、トークン部分のみだと「Undefined index: expires_in」とエラーが吐かれてしまいます。「fetchAccessTokenWithAuthCode」で取得したデータごとJSONに整形して設定しましょう。<br>
     (有効期限チェックをしない場合は、トークン部分のみでも可能です。)
 
-    ```
+    ```php
     array (
         'access_token' => 'ya29.A0AfH6SMAY1vO5I5xwYgD3kaxqA95zzbIKQXh1vuJ4p_vGCgY************',
         'expires_in' => 3599,
