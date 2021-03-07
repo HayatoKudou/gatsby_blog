@@ -1,47 +1,24 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://rolwinreevan.com">
-    <img alt="Gatsby" src="https://github.com/rolwin100/rolwinreevan_gatsby_blog/blob/master/src/images/icon.png" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's RolwinReevan Portfolio template using <a href='https://ant.design/' target='_blank'>ant-design</a>
-</h1>
-<h3 align="center">Probably the most beautiful 😍 gatsby starter template</h3>
+## クイックスタート
 
-This starter consists of ant design system you can use it for your personal blog. I have give a lot of time in developing this starter because I found that there were not much starters with a very good design. Please give a star to this project if you have like it to encourage me 😄. Thank you.
-
-
-## 🚀 Quick start
-
-1.  **Setup the project by.**
-
-    clone the project and install the dependencies
+1.  プロジェクトを複製し、依存関係パッケージをインストールします。
 
     ```shell
     
-    git clone https://github.com/rolwin100/rolwinreevan_gatsby_blog.git
-    cd rolwinreevan_gatsby_blog 
+    git clone https://github.com/HayatoKudou/gatsby_blog
+    cd gatsby_blog 
     npm install
     ```
 
-1.  **Start developing.**
+2. developモードで開発
 
 
     ```shell
     gatsby develop
     ```
 
-1.  **Open the source code and start editing!**
+## ディレクトリ構成
 
-    Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
-
-
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+Gatsbyプロジェクトに表示されるトップレベルのファイルとディレクトリを確認します。
 
     .
     ├── content
@@ -63,32 +40,32 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── package.json
     └── README.md
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+1.  **`/node_modules`**: このディレクトリには、プロジェクトが依存するコードのすべてのモジュール（npmパッケージ）が自動的にインストールされます。
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+2.  **`/src`**: このディレクトリには、サイトヘッダーやページテンプレートなど、サイトのフロントに表示されるものに関連するすべてのコードが含まれます。
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+3.  **`.gitignore`**: このファイルは、バージョン履歴を追跡しない/維持しないファイルをgitに通知します。
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+4.  **`.prettierrc`**: これは[Prettier](https://prettier.io/)の設定ファイルです。Prettierは、コードのフォーマットの一貫性を保つのに役立つツールです。
 
-5.  **`config.js`**: all the configuration variables that are necessary for the site are added in this file.
+5.  **`config.js`**: サイトに必要なすべての構成変数がこのファイルに追加されます。
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+6.  **`gatsby-config.js`**: これはGatsbyサイトのメイン構成ファイルです。ここで、サイトのタイトルや説明、含めるGatsbyプラグインなど、サイトに関する情報（メタデータ）を指定できます（詳細については、構成[ドキュメント](https://www.gatsbyjs.org/docs/gatsby-config/)を確認してください）。
 
-7.  **`gatsby-config.plugins.js`**: This file contains the plugin configurations which is used in the gatsby-config.js. For modularity purpose we do this. 
+7.  **`gatsby-config.plugins.js`**: このファイルには、gatsby-config.jsで使用されるプラグイン構成が含まれています。モジュール化の目的でこれを行います。
 
-8.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+8.  **`gatsby-node.js`**: このファイルは、GatsbyがGatsby Node APIの使用法を見つけることを期待している場所です。これらにより、サイト構築プロセスの一部に影響を与えるデフォルトのGatsby設定のカスタマイズ/拡張が可能になります。
 
-9.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+9.  **`gatsby-ssr.js`**: このファイルは、GatsbyがGatsbyサーバー側レンダリングAPIの使用法を見つけることを期待している場所です。これらにより、サーバー側のレンダリングに影響を与えるデフォルトのGatsby設定をカスタマイズできます。
 
-10.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+10.  **`LICENSE`**: GatsbyはMITライセンスの下でライセンスされています。
 
-11. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+11. **`package-lock.json`** これは、プロジェクトにインストールされたnpm依存関係の正確なバージョンに基づいて自動的に生成されたファイルです。（このファイルを直接変更することはありません）。
 
-12. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+12. **`package.json`**: Node.jsプロジェクトのマニフェストファイル。メタデータ（プロジェクトの名前、作成者など）などが含まれます。このマニフェストは、npmがプロジェクトにインストールするパッケージを確認するファイルです。
 
-13. **`README.md`**: A text file containing useful reference information about your project.
+13. **`README.md`**: プロジェクトに関する有用な参照情報を含むテキストファイルです。
 
-14. **`content`**: This is the folder where we write our Markdowns for the blogs.
+14. **`content`**: これは、ブログのマークダウンを書き込むフォルダーです。
 
 <!-- AUTO-GENERATED-CONTENT:END -->
