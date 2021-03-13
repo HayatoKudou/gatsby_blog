@@ -20,6 +20,10 @@ hydraを使ってローカル環境のログインフォームにブルートフ
 
 ## hydraとは
 
+hydraはパスワードクラック用のライブラリです。<br>
+パスワードリストからブルートフォース攻撃をする際に用いられます。<br>
+[公式GitHub](https://github.com/vanhauser-thc/thc-hydra)
+
 ## 手順
 
 1. ### hydraのインストール
@@ -50,8 +54,8 @@ hydraを使ってローカル環境のログインフォームにブルートフ
 
 2. ### PHPでログインフォームの実装
 
-    UserIDとPASSで認証をする、Basic認証のログインフォームをPHPで実装していきます。<br>
-    例として、UserIDは「test」、PASSは「test」でMySqlに登録します。
+    NAMEとPASSで認証をする、Basic認証のログインフォームをPHPで実装していきます。<br>
+    例として、NAMEは「test」、PASSは「test」でMySqlに登録します。
     IDとPASSが一致すると「ログイン成功です」と表示されます。
 
     ```html

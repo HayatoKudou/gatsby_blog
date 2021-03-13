@@ -63,5 +63,10 @@ module.exports = {
         description: 'Apacheは、世界中で使用されているWebサーバーソフトウェア(HTTPサーバー)です。',
         color: '#cc2336',
       },
+      NodeJs: {
+        name: 'NodeJs',
+        description: 'Node.jsは、スケーラブルなネットワークアプリケーションを構築するために設計された非同期型のイベント駆動の JavaScript 環境です。',
+        color: '#43853d',
+      },
     },
   };
