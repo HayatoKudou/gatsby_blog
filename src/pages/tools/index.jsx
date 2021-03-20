@@ -9,25 +9,25 @@ import PostCard from '../../components/PostCard';
 import SEO from '../../components/Seo';
 import Guide from '../../components/PageLayout/Guide';
 
-const Blog = ({ data }) => (
+const Tools = ({ data }) => (
   <Layout className="outerPadding">
     <Layout className="container">
       <Header />
       <SEO
-        title="Blog"
+        title="Tools"
         description="駆け出しエンジニアが、PHP・JavaScriptを中心に、WEB関連の技術をブログで発信しています。"
-        path="blog"
+        path="tools"
         keywords={['駆け出しエンジニア', 'エンジニア', 'ブログ', 'PHP', 'Laravel', 'Javascript', 'ReactJS']}
+		
       />
       <SidebarWrapper>
         <div className="marginTopTitle">
-          <h1 className="titleSeparate">Blog</h1>
+          <h1 className="titleSeparate">Tools</h1>
         </div>
         <Row gutter={[20, 20]}>
-        {
+          {
             data.allMarkdownRemark && data.allMarkdownRemark.edges.map((val, key) => {
-				return val.node.frontmatter.mode !== 'tools' && 
-                (
+				return val.node.frontmatter.mode == 'tools' && (
 			 	  <Col key={key} xs={24} sm={24} md={12} lg={8}>
 					<PostCard data={val} />
 				  </Col>
@@ -41,7 +41,7 @@ const Blog = ({ data }) => (
   </Layout>
 );
 
-Blog.propTypes = {
+Tools.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
@@ -53,7 +53,7 @@ export const query = graphql`
   {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "/blog/" } }
+      filter: { fileAbsolutePath: { regex: "/tools/" } }
     ) {
       edges {
         node {
@@ -63,7 +63,7 @@ export const query = graphql`
             title
             tags
             excerpt
-            mode
+			mode
             cover {
               childImageSharp {
                 fluid(maxWidth: 288) {
@@ -78,4 +78,4 @@ export const query = graphql`
   }
 `;
 
-export default Blog;
+export default Tools;

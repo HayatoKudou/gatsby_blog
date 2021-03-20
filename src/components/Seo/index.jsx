@@ -62,7 +62,7 @@ function SEO({
                 { property: 'og:image', content: metaImageUrl },
                 { property: 'og:image:alt', content: description },
                 { property: 'og:site_name', content: Config.siteTitle },
-                { property: 'og:locale', content: lang || 'en_US' },
+                { property: 'og:locale', content: lang || 'ja_JP' },
                 /* Twitter card */
                 { name: 'twitter:card', content: 'summary_large_image' },
                 { name: 'twitter:title', content: title },

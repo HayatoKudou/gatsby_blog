@@ -45,7 +45,7 @@ UnityをWebGL形式で出力し、react-unity-webglライブラリを使ってRe
     画像のような構造になっているかと思います。<br>
     このBuildディレクトリを、Reactプロジェクトのpublicフォルダーに置いてください。<br>
 
-    ![](./React_Unity.png)
+    ![](./ReactUnity.png)
 
 3. ### React側でUnityオブジェクトの作成
 

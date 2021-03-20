@@ -13,6 +13,7 @@ module.exports = {
       contact: 'contact',
       resume: 'resume',
       tag: 'tags',
+      tools: 'tools',
     },
     social: {
       github: 'https://github.com/HayatoKudou',
