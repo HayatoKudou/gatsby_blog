@@ -2,7 +2,7 @@
 title: "正規表現ツール"
 path: blog/regularExpression
 tags: [JavaScript, React]
-cover: ./reactHookForm.jpg
+cover: ./reactRegex.png
 date: 2021-03-20
 excerpt: 正規表現ツール
 mode: tools
