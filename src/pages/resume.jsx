@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Document, Page } from 'react-pdf';
+import { Document, Page, pdfjs } from 'react-pdf';
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 import { Button, Row, Col } from 'antd';
 import SEO from '../components/Seo';
 
@@ -31,6 +32,7 @@ export default class Resume extends Component {
     return (
       <div>
         <SEO
+          description="職務経歴書"
           title="Resume"
           path="resume"
         />

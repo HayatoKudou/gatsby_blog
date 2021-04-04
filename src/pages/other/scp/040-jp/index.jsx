@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useRef, createRef} from 'react';
 import SEO from '../../../../components/Seo';
 import { Layout, Row, Col } from 'antd';
-import style from './040-jp.module.css';
+import * as style from './040-jp.module.css';
 import First from "../../../../images/scp/040-jp-1.jpg"
 import Second from "../../../../images/scp/040-jp-2.png"
 

@@ -1,4 +1,5 @@
-import React from 'react';
+import render from 'react-dom'
+import React, { useRef, useState } from 'react'
 import {
     Affix, Layout, Row, Col,
 } from 'antd';
@@ -6,18 +7,34 @@ import FA from 'react-fontawesome';
 import FeatherIcon from 'feather-icons-react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { globalHistory } from '@reach/router';
-import style from './sidebar.module.less';
+import * as style from './sidebar.module.less';
 import { useWindowSize } from '../../../utils/hooks';
 import Config from '../../../../config';
+
+import { OrbitControls, Box } from 'drei'
+import { Canvas } from 'react-three-fiber'
+// import './styles.css'
 
 const { Content } = Layout;
 const {
     github, qiita, twitter,
 } = Config.social;
 
+
 const DomContent = () => (
     <aside>
-        <div className={style.profileAvatar} />
+        {/* <div className={style.profileAvatar} /> */}
+        <Canvas>
+            {/* Scene lighting */}
+            <ambientLight />
+            <spotLight />
+            {/* Controll camera with mouse */}
+            <OrbitControls />
+            {/* Some geometry */}
+            <Box style={{outline: 'none'}}>
+                <meshStandardMaterial color="#e23" />
+            </Box>
+        </Canvas>
         <div className={`${style.name} centerAlign`}>
             <div className={`${style.boxName} centerAlign`}>
                 <h2 className="myname">
@@ -53,8 +70,8 @@ const DomContent = () => (
                 </li>
             </ul>
             {/* <div className={style.resumeDownload}>
-        <a href="../resume.pdf" download target="_blank">Download CV</a>
-      </div> */}
+                <a href="../resume.pdf" download target="_blank">Download CV</a>
+              </div> */}
         </div>
     </aside>
 );

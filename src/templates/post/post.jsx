@@ -12,7 +12,7 @@ import Guide from '../../components/PageLayout/Guide';
 
 import 'prismjs/themes/prism-solarizedlight.css';
 import './highlight-syntax.less';
-import style from './post.module.less';
+import * as style from './post.module.less';
 
 const Post = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark;

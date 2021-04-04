@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { navigate } from "gatsby"
 import Hiiro from '../../../images/scp/444-jp.png';
 import Nekodesu from '../../../images/scp/040-jp.jpeg';
-import style from './guide.module.less';
+import * as style from './guide.module.less';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import ClearIcon from '@material-ui/icons/Clear';
 
