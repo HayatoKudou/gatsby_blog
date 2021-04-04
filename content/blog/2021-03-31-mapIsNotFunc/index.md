@@ -1,10 +1,10 @@
 ---
-title: "【React】Uncaught TypeError: map is not a function"
+title: "【React】Uncaught TypeError: map is not a function エラーの解決方法"
 path: blog/mapIsNotFunc
 tags: [JavaScript, React]
 cover: ./React.jpeg
 date: 2021-03-31
-excerpt: 【React】map is not a function
+excerpt: 【React】map is not a function エラーの解決方法
 ---
 
 ## Uncaught TypeError: map is not a function
