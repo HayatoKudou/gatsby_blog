@@ -16,7 +16,7 @@
     @selector: ~'.gatsby-highlight[data-language=@{language}]::before';
     @{selector} {
         color: @text;
-        content: @content;
+        // content: @content;
         text-align: end;
         top: .7rem;
         left: -1rem;
@@ -37,7 +37,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        content: attr(data-language);
+        // content: attr(data-language);
         text-indent: 15px;
     }
     &[data-language="text"], &[data-language="none"] {
@@ -46,6 +46,7 @@
         }
     }
     pre {
+        // padding-top: 35px;
         overflow-x: auto;
         overflow-y: hidden;
         background-color: rgb(40, 42, 54) !important;
@@ -95,6 +96,9 @@
             .token.atrule, .token.attr-value, .token.keyword {
                 color: #f1fa8c;
             }
+        }
+        ::selection {
+            background: #1890ff !important;
         }
     }
 }
