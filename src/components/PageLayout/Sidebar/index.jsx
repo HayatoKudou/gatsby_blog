@@ -11,8 +11,8 @@ import * as style from './sidebar.module.less';
 import { useWindowSize } from '../../../utils/hooks';
 import Config from '../../../../config';
 
-import { OrbitControls, Box } from 'drei'
-import { Canvas } from 'react-three-fiber'
+import { OrbitControls } from 'drei'
+import { Canvas, useFrame } from 'react-three-fiber'
 // import './styles.css'
 
 const { Content } = Layout;
@@ -20,20 +20,41 @@ const {
     github, qiita, twitter,
 } = Config.social;
 
+function Box(props) {
+    // This reference will give us direct access to the mesh
+    const mesh = useRef()
+    // Set up state for the hovered and active state
+    const [hovered, setHover] = useState(false)
+    const [active, setActive] = useState(false)
+    // Rotate mesh every frame, this is outside of React without overhead
+    useFrame(() => {
+        mesh.current.rotation.x = mesh.current.rotation.y += 0.01
+    })
+    return (
+        <mesh
+            {...props}
+            ref={mesh}
+            scale={active ? [1.5, 1.5, 1.5] : [1, 1, 1]}
+            onClick={(e) => setActive(!active)}
+            onPointerOver={(e) => setHover(true)}
+            onPointerOut={(e) => setHover(false)}>
+            <boxBufferGeometry args={[1, 1, 1]} />
+            <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
+        </mesh>
+    )
+}
+
 
 const DomContent = () => (
     <aside>
         {/* <div className={style.profileAvatar} /> */}
         <Canvas>
-            {/* Scene lighting */}
-            <ambientLight />
-            <spotLight />
-            {/* Controll camera with mouse */}
+            <ambientLight intensity={0.5} />
+            <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+            <pointLight position={[-10, -10, -10]} />
             <OrbitControls />
-            {/* Some geometry */}
-            <Box style={{outline: 'none'}}>
-                <meshStandardMaterial color="#e23" />
-            </Box>
+            <Box position={[-1.2, 0, 0]} />
+            <Box position={[1.2, 0, 0]} />
         </Canvas>
         <div className={`${style.name} centerAlign`}>
             <div className={`${style.boxName} centerAlign`}>
