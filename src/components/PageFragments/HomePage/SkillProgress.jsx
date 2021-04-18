@@ -28,6 +28,10 @@ const SkillsProgress = () => (
           percent={40}
           text="AWS"
         />
+        <ProgressBar
+          percent={30}
+          text="Azure"
+        />
       </Col>
       <Col xs={24} sm={24} md={12}>
         <ProgressBar
