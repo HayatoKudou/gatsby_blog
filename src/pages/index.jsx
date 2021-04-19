@@ -7,7 +7,7 @@ import AboutMe from '../components/PageFragments/HomePage/AboutMe';
 import Skills from '../components/PageFragments/HomePage/SkillProgress';
 import Guide from '../components/PageLayout/Guide';
 
-export default () => (
+const Named = () => (
   <Layout className="outerPadding">
     <Layout className="container">
       <Header />
@@ -21,3 +21,5 @@ export default () => (
     </Layout>
   </Layout>
 );
+
+export default Named;

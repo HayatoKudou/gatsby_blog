@@ -18,7 +18,7 @@ export const query = graphql`
   }
 `;
 
-export default ({ data }) => (
+const NotFound = ({ data }) => (
   <Layout className="outerPadding">
     <Layout className="container">
       <Header />
@@ -51,3 +51,5 @@ export default ({ data }) => (
     </Layout>
   </Layout>
 );
+
+export default NotFound;
