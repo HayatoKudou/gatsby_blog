@@ -80,7 +80,7 @@ function Box(props) {
 
 function isSmartPhone() {
     // UserAgentからのスマホ判定
-    if (navigator !== undefind && navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
+    if (typeof window !== 'undefined'  && navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
         return true;
     } else {
         return false;
