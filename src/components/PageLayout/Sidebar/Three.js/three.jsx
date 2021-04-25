@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import ReactDOM from 'react-dom'
-import React, { Suspense, useRef, useMemo } from 'react'
+import React, { Suspense, useRef, useMemo, useState } from 'react'
 import { Canvas, useLoader, useFrame } from 'react-three-fiber'
 import uniform from './uniform'
 import './styles.css'
@@ -54,20 +54,67 @@ function Stars({ count = 5000 }) {
     )
 }
 
+function Box(props) {
+    // This reference will give us direct access to the mesh
+    const mesh = useRef()
+    // Set up state for the hovered and active state
+    const [hovered, setHover] = useState(false)
+    const [active, setActive] = useState(false)
+    // Rotate mesh every frame, this is outside of React without overhead
+    useFrame(() => {
+        mesh.current.rotation.x = mesh.current.rotation.y += 0.01
+    })
+    return (
+        <mesh
+            {...props}
+            ref={mesh}
+            scale={active ? [1.5, 1.5, 1.5] : [1, 1, 1]}
+            onClick={(e) => setActive(!active)}
+            onPointerOver={(e) => setHover(true)}
+            onPointerOut={(e) => setHover(false)}>
+            <boxBufferGeometry args={[1, 1, 1]} />
+            <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
+        </mesh>
+    )
+}
+
+// 画面はばでスマホ判定
+function isSmartPhone() {
+    if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 export const Three = () => {
     return (
-        <Canvas id="three_body"
-            camera={{ position: [0, 0, 10], fov: 40 }}
-            onCreated={({ gl }) => {
-                gl.gammaInput = true
-                gl.toneMapping = THREE.ACESFilmicToneMapping
-            }}>
-            <OrbitControls />
-            <pointLight intensity={0.1} position={[10, 10, 10]} />
-            <rectAreaLight intensity={3} position={[0, 10, -10]} width={30} height={30} onUpdate={self => self.lookAt(new THREE.Vector3(0, 0, 0))} />
-            <Suspense fallback={null}>
-                <Earth />
-            </Suspense>
-        </Canvas>
+        <div>
+            {isSmartPhone() ? (
+                <Canvas>
+                    <ambientLight intensity={0.5} />
+                    <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+                    <pointLight position={[-10, -10, -10]} />
+                    <OrbitControls />
+                    <Box position={[-1.2, 0, 0]} />
+                    <Box position={[1.2, 0, 0]} />
+                </Canvas>
+            ) : (
+
+                <Canvas id="three_body"
+                    camera={{ position: [0, 0, 10], fov: 40 }}
+                    onCreated={({ gl }) => {
+                        gl.gammaInput = true
+                        gl.toneMapping = THREE.ACESFilmicToneMapping
+                    }}>
+                    <OrbitControls />
+                    <pointLight intensity={0.1} position={[10, 10, 10]} />
+                    <rectAreaLight intensity={3} position={[0, 10, -10]} width={30} height={30} onUpdate={self => self.lookAt(new THREE.Vector3(0, 0, 0))} />
+                    <Suspense fallback={null}>
+                        <Earth />
+                    </Suspense>
+                </Canvas>
+            )}
+        </div>
     )
 }

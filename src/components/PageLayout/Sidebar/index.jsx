@@ -10,13 +10,12 @@ import { globalHistory } from '@reach/router';
 import * as style from './sidebar.module.less';
 import { useWindowSize } from '../../../utils/hooks';
 import Config from '../../../../config';
-import {Three} from './Three.js/three';
+import { Three } from './Three.js/three';
 
 const { Content } = Layout;
 const {
     github, qiita, twitter,
 } = Config.social;
-
 
 const DomContent = () => (
     <aside>
