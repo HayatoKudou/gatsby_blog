@@ -25,6 +25,12 @@ body{
     padding: 15px;
 }
 
+.Access {
+    margin: 0 auto;
+    display: block;
+    margin-top: 150px;
+}
+
 @media screen and (max-width:480px) {
     .root {
         background-color: black;

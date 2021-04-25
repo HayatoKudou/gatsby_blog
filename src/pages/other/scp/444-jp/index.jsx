@@ -1,9 +1,10 @@
-import React, {useEffect, useState, useRef, createRef} from 'react';
+import React, { useEffect, useState, useRef, createRef } from 'react';
 import SEO from '../../../../components/Seo';
 import { Layout, Row, Col } from 'antd';
 import * as style from './444-jp.module.css';
 import First from "../../../../images/scp/444-jp-1.jpg"
 import Second from "../../../../images/scp/444-jp-2.jpg"
+import musicPath from "./coe-font-studio.wav"
 
 const OtherPage = () => {
 
@@ -59,16 +60,20 @@ SCP-444-JP被験者、元被験者、それらの手によって殺害された�
     const [word_1, set_word_1] = useState('');
     const [word_2, set_word_2] = useState('');
     const [showFlag, set_showFlag] = useState(true);
+    const [noneFlag, setNoneFlag] = useState(false);
 
     let index = 0;
-    let index2 = 0;    
+    let index2 = 0;
     var timer;
     var timer2;
 
     useEffect(() => {
-        // const uttr = new SpeechSynthesisUtterance("Hello World!");
-        // window.speechSynthesis.speak(uttr);
-        readWord('section1');
+        // readWord('section1');
+        // if(confirm('音が出ます。よろしいですか？')){
+        //     var music = new Audio();
+        //     music.src = musicPath;
+        //     music.play();
+        // }
         return () => {
             // Unmount時の処理を記述
             clearTimeout(timer);
@@ -76,10 +81,16 @@ SCP-444-JP被験者、元被験者、それらの手によって殺害された�
         };
     }, [])
 
-    function readWord(name){
-        if(name === 'section1'){
+    function readWord(name) {
+        setNoneFlag(true);
+        if (name === 'section1') {
+            if(confirm('音が出ます。よろしいですか？')){
+                var music = new Audio();
+                music.src = musicPath;
+                music.play();
+            }
             timer = setInterval(() => {
-                if(index === Explanation_1.length+1){
+                if (index === Explanation_1.length + 1) {
                     scroll('section1');
                     set_showFlag(false);
                     section1.current.scrollIntoView();
@@ -87,23 +98,23 @@ SCP-444-JP被験者、元被験者、それらの手によって殺害された�
                     return;
                 }
                 set_word_1(Explanation_1.substring(0, index++))
-            }, 60)
-        } else if(name === 'section2'){
+            }, 110)
+        } else if (name === 'section2') {
             timer2 = setInterval(() => {
-                if(index2 === Explanation_2.length+1){                    
-                    clearInterval(timer2);                    
+                if (index2 === Explanation_2.length + 1) {
+                    clearInterval(timer2);
                     return;
                 }
                 bottom.current.scrollIntoView();
                 set_word_2(Explanation_2.substring(0, index2++))
-            }, 60)
+            }, 110)
         }
     }
 
-    function scroll(name){
-        if(name == 'section1'){
+    function scroll(name) {
+        if (name == 'section1') {
             section1.current.scrollIntoView();
-            const timer3 = setTimeout(function(){
+            const timer3 = setTimeout(function () {
                 readWord('section2');
             }, 5000);
         }
@@ -112,17 +123,18 @@ SCP-444-JP被験者、元被験者、それらの手によって殺害された�
     return (
         <div className={style.root}>
             <SEO
-              title="SCP-444-JP"
-              description="SCP-444-JP"
-              path="scp"
+                title="SCP-444-JP"
+                description="SCP-444-JP"
+                path="scp"
             />
+            <button className={style.Access} style={{ display: noneFlag ? 'none' : '' }} onClick={()=>readWord('section1')}>Access</button>
             <p className={style.word}>
                 {word_1}
             </p>
             <div ref={section1}></div>
             <div className={style.images} style={{ display: showFlag ? 'none' : '' }}>
-                <img className={style.image} src={First} alt="444-jp-1"/>
-                <img className={style.image} src={Second} alt="444-jp-2"/>
+                <img className={style.image} src={First} alt="444-jp-1" />
+                <img className={style.image} src={Second} alt="444-jp-2" />
             </div>
             <p className={style.word2}>
                 {word_2}
