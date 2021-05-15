@@ -113,7 +113,7 @@ Google Calendar API: Push Notificationsを使用し、グーグルカレンダ�
     今回は[phpクライアントライブラリ](https://developers.google.com/resources/api-libraries/documentation/calendar/v3/php/latest/class-Google_Service_Calendar.html)で実装します。<br>
     まず、Google Clientを作成するため、「Google APIs Client Library for PHP」をインストールします。
 
-    ```
+    ```shell
     composer require google/apiclient:^2.0
     ```
 

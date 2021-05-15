@@ -27,7 +27,7 @@ echo "■複合化"."<br>\n";
 echo $decrypted . PHP_EOL;
 ```
 
-```
+```shell
 ■平文
 ワレ奇襲ニ成功セリ
 ■暗号化
@@ -52,7 +52,7 @@ echo $public_key_pem;
 
 下記のような形式で出力されればOKです。
 
-```
+```shell
 -----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuTX9NTyNaSVYtzEHMLr+
 pCvqFjDqZcUuyah3VWU1FLosrn4uZ1rwl7w98W8A6Q5Ue5VkE9dNlGB/WtJkagoG
 JDpjhWUDnbqMtlan/q5uegA8CQW4kSaWUZq59PBWavibCMPAQJtXZXnV+p6hM1bS

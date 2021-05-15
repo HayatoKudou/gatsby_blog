@@ -20,19 +20,20 @@ excerpt: Linux OSにphp-gmp拡張モジュールをインストールする方�
 
 1. ### php-gmpインストール
 
-    ```
+    ```shell
     yum -y install php-gmp
     ```
 
     基本的には、このコマンドでインストールできるそうですが、私の環境ではインストール時に依存関係のエラーが発生してしまいました。
     remiリポジトリを確認したところ、php73-php-gmpというパッケージがあったためこちらを使います。
 
-    ```
+    ```shell
     yum -y install php73-php-gmp
     ```
 
     正しくインストールされたかコマンドで確認してみましょう。
-    ```
+
+    ```shell
     yum list installed
     ```
 
@@ -40,13 +41,13 @@ excerpt: Linux OSにphp-gmp拡張モジュールをインストールする方�
 
     php-gmpの保存場所を確認します。
 
-    ```
+    ```shell
     find / -name gmp.so -print
     ```
 
     確認できたら、php.ini の extension という項目に、確認したphp-gmpのパスを記載しモジュールを追加します。
 
-    ```
+    ```shell
     extension=/opt/remi/php73/root/usr/lib64/php/modules/gmp.so
     ```
 
@@ -54,7 +55,7 @@ excerpt: Linux OSにphp-gmp拡張モジュールをインストールする方�
     phpinofoでphp-gmpが入っているか確認してみます。<br>
     「GMP version」の記載がされていれば成功です。
 
-    ```
+    ```shell
     php -r 'phpinfo();'
     ```
 

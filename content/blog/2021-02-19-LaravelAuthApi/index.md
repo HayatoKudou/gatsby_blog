@@ -40,7 +40,8 @@ Laravel標準のapi guardを使用しトークンベースのAPI認証をする�
     ```
     migrationファイルができたら、migrateしテーブルを作成します。<br>
     usersテーブルが作成されたことを確認してください。
-    ```
+
+    ```shell
     php artisan migrate
     ```
 
