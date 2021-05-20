@@ -41,7 +41,7 @@ function SEO({
           Config.siteUrl,
           Config.pathPrefix,
           path,
-        );
+        ).replace('/https', 'https');
         const metaImageUrl = Utils.resolveUrl(
           Config.siteUrl,
           imageUrl || data.file.childImageSharp.fixed.src,

@@ -29,7 +29,7 @@ const Post = ({ data }) => {
     Config.siteUrl,
     Config.pathPrefix,
     path,
-  );
+  ).replace('/https', 'https');
   return (
     <Layout className="outerPadding">
       <Layout className="container">

@@ -1,5 +1,5 @@
 module.exports = {
-    pathPrefix: '',
+    pathPrefix: '/',
     siteUrl: 'https://kudohayatoblog.com',
     siteTitle: '駆け出しエンジニアの開発ブログ',
     siteDescription: 'WEBエンジニアのブログ',
