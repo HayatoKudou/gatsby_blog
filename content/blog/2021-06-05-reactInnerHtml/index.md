@@ -4,7 +4,7 @@ path: blog/reactInnerHtml
 tags: [JavaScript, React]
 cover: ./react.png
 date: 2021-06-04
-excerpt: ReactDOM.render()を使って、Reactメソッド内でHTMLをレンダリングさせる方法
+excerpt: Reactメソッド内でHTMLをレンダリングさせる方法
 ---
 
 Reactメソッド内でHTMLをレンダリングさせる方法の解説です。
@@ -12,9 +12,11 @@ Reactメソッド内でHTMLをレンダリングさせる方法の解説です�
 
 本記事の詳細な内容は、[公式:要素のレンダー](https://ja.reactjs.org/docs/rendering-elements.html)をご参照ください。
 
+## 方法1: ReactDOM.render
+
 ### 完成図
 
-[DEMO](/verification/reactInnerHtml)
+[DEMO](/verification/reactInnerHtml/ReactDOMRender)
 
 ```javascript
 import React from 'react';
@@ -76,4 +78,42 @@ renderDeleteDom() では、空の要素で上書きすることで、HTML要素�
 function renderDeleteDom(){
     ReactDOM.render('', document.getElementById('parent'));
 }
+```
+
+## 方法2: dangerouslySetInnerHTML
+
+※注意: [dangerouslySetInnerHTML](https://ja.reactjs.org/docs/dom-elements.html)は、jsにおける[innerHTML](https://developer.mozilla.org/ja/docs/Web/API/Element/innerHTML)のReactでの代替です。<br>
+一般的にコードからHTMLを設定することは XSS攻撃に晒してしまいやすいため注意が必要です。
+
+### 完成図
+
+[DEMO](/verification/reactInnerHtml/dangerouslySetInnerHTML)
+
+```javascript
+function App() {
+    const [html, setHtml] = useState('');
+
+    function renderAddDom(value) {
+        setHtml(value);
+    };
+
+    return (
+        <div>
+            <button onClick={() => renderAddDom('<p>child</p>')}>追加</button>
+            <button onClick={() => renderAddDom('')}>削除</button>
+            <div dangerouslySetInnerHTML={{__html: html}}></div>
+        </div>
+    )
+};
+
+export default App;
+```
+
+### 解説
+
+ReactDOM.render ではメソッド内でHTMLを設定していますが、dangerouslySetInnerHTML ではrender時にHTMLを設定しています。<br>
+render時にステートに設定していたHTML文字列を、__html というキーを持つオブジェクトを渡すことで機能します。
+
+```javascript
+<div dangerouslySetInnerHTML={{__html: html}}></div>
 ```
