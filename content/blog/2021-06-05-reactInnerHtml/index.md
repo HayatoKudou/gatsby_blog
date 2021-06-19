@@ -4,7 +4,7 @@ path: blog/reactInnerHtml
 tags: [JavaScript, React]
 cover: ./react.png
 date: 2021-06-04
-excerpt: Reactメソッド内でHTMLをレンダリングさせる方法
+excerpt: 「ReactDOM.render()」「dangerouslySetInnerHTML」 でReactメソッド内でHTMLをレンダリングさせる方法
 ---
 
 Reactメソッド内でHTMLをレンダリングさせる方法の解説です。
@@ -83,7 +83,10 @@ function renderDeleteDom(){
 ## 方法2: dangerouslySetInnerHTML
 
 ※注意: [dangerouslySetInnerHTML](https://ja.reactjs.org/docs/dom-elements.html)は、jsにおける[innerHTML](https://developer.mozilla.org/ja/docs/Web/API/Element/innerHTML)のReactでの代替です。<br>
-一般的にコードからHTMLを設定することは XSS攻撃に晒してしまいやすいため注意が必要です。
+一般的にコードからHTMLを設定することは XSS攻撃に晒してしまいやすいため注意が必要です。<br>
+<br>
+利用する場合はエスケープ処理を併せて実装することをお勧めします。<br>
+([DOMPurify](https://github.com/cure53/DOMPurify) などのライブラリを利用することで簡単に実装できます。)
 
 ### 完成図
 
