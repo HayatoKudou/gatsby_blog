@@ -6,7 +6,7 @@ module.exports = {
     author: 'Hayato Kudo',
     postsForArchivePage: 3,
     defaultLanguage: 'ja',
-    disqusScript: process.env.DISQUS_SCRIPT || 'https://rolwinreevan.disqus.com/embed.js',
+    disqusScript: process.env.DISQUS_SCRIPT || 'https://https-kudohayatoblog-com.disqus.com/embed.js',
     pages: {
         home: '/',
         blog: 'blog',
