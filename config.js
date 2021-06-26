@@ -1,7 +1,7 @@
 module.exports = {
     pathPrefix: '',
     siteUrl: 'https://kudohayatoblog.com',
-    siteTitle: '駆け出しエンジニアの開発ブログ',
+    siteTitle: 'エンジニアの開発ブログ',
     siteDescription: 'WEBエンジニアのブログ',
     author: 'Hayato Kudo',
     postsForArchivePage: 3,
