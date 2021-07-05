@@ -24,15 +24,15 @@ const Blog = ({ data }) => (
           <h1 className="titleSeparate">Blog</h1>
         </div>
         <Row gutter={[20, 20]}>
-        {
+          {
             data.allMarkdownRemark && data.allMarkdownRemark.edges.map((val, key) => {
-				return val.node.frontmatter.mode !== 'tools' && 
+              return val.node.frontmatter.mode !== 'tools' &&
                 (
-			 	  <Col key={key} xs={24} sm={24} md={12} lg={8}>
-					<PostCard data={val} />
-				  </Col>
-				)
-			})
+                  <Col key={key} xs={24} sm={24} md={12} lg={8}>
+                    <PostCard data={val} />
+                  </Col>
+                )
+            })
           }
         </Row>
       </SidebarWrapper>
