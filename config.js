@@ -6,7 +6,7 @@ module.exports = {
     author: 'Hayato Kudo',
     postsForArchivePage: 3,
     defaultLanguage: 'ja',
-    disqusScript: process.env.DISQUS_SCRIPT || 'https://https-kudohayatoblog-com.disqus.com/embed.js',
+    disqusScript: 'https://https-kudohayatoblog-com.disqus.com/embed.js' || process.env.DISQUS_SCRIPT,
     pages: {
         home: '/',
         blog: 'blog',
@@ -27,6 +27,11 @@ module.exports = {
         JavaScript: {
             name: 'JavaScript',
             description: 'JavaScriptは、HTMLやCSSと並んでWebページに機能を持たせるために使われるオブジェクト指向プログラミング言語です。',
+            color: '#f0da50',
+        },
+        TypeScript: {
+            name: 'TypeScript',
+            description: 'TypeScriptは、JavaScriptの機能を拡張し、開発されたオープンソースのプログラミング言語です。',
             color: '#f0da50',
         },
         Laravel: {
