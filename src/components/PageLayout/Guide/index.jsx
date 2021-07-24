@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { navigate } from "gatsby"
 import Hiiro from '../../../images/scp/444-jp.png';

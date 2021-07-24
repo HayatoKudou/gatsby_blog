@@ -8,6 +8,8 @@ excerpt: Just press a "Hey Cat !!" button to see a gif image of a cat.
 mode: tools
 ---
 
+https://marketplace.visualstudio.com/items?itemName=CatTherapy.vscode-cat-therapy
+
 # Cat Therapy
 
 Just press a "Hey Cat !!" button to see a gif image of a cat.<br>

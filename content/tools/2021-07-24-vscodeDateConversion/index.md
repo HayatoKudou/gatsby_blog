@@ -8,6 +8,8 @@ excerpt: Convert IOS, RFC, unixtime, etc. into readable form.
 mode: tools
 ---
 
+https://marketplace.visualstudio.com/items?itemName=CatTherapy.date-conversion
+
 # Date Conversion
 
 Converts the focused IOS, RFC, unixtime, and other date standards to the following
