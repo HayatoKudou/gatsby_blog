@@ -16,7 +16,7 @@ Converts the focused IOS, RFC, unixtime, and other date standards to the followi
 2. string according to the local date format
 3. UNIX time
 
-![demo](./demo.gif)
+![](/vscodeDateConversion.gif)
 
 ### Supported formats
 ```

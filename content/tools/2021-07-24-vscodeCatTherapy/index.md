@@ -16,7 +16,7 @@ Cats solve everything.
 
 ## Demo
 
-![demo](demo.gif)
+![](/vscodeCatTherapy.gif)
 
 ## Available Commands
 
