@@ -4,13 +4,19 @@ const path = require('path');
 const config = require('./config');
 const utils = require('./src/utils/pageUtils');
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === "build-html" || stage === "develop-html") {
+exports.onCreateWebpackConfig = ({
+  stage,
+  rules,
+  loaders,
+  plugins,
+  actions,
+}) => {
+  if (stage === "build-html") {
     actions.setWebpackConfig({
       module: {
         rules: [
           {
-            test: /bad-module/,
+            test: /canvas/,
             use: loaders.null(),
           },
         ],
