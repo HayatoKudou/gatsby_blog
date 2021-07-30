@@ -37,27 +37,7 @@ class Comments extends React.Component {
   }
 
   remeveAds() {
-    // const disqus = document.getElementById('disqus_thread');
-    // let remove_ads = setInterval(() => {
-    //   const iframes = document.getElementsByTagName('iframe');
-    //   for (var iframe in iframes) {
-    //       if (typeof iframes[iframe].src === 'undefined') {
-    //         continue;
-    //       }
-    //       // iframes[iframe].remove();
-    //       if (iframes[iframe].src.match(/(ads-iframe)|(disqusads)|(disqus)/gi)) {
-    //         iframes[iframe].remove();
-    //         // disqus.style.width = '100%';
-    //       }
-    //   }
-
-    // }, 500);
-    // setTimeout(() => {
-    //   clearInterval(remove_ads);
-    // }, 5000);
-
     const disqus = jQuery('#disqus_thread');
-
     disqus.ready(function () {
       setTimeout(function () {
         if (disqus.children().length >= 3) {
