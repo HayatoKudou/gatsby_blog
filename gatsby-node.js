@@ -6,9 +6,7 @@ const utils = require('./src/utils/pageUtils');
 
 exports.onCreateWebpackConfig = ({
   stage,
-  rules,
   loaders,
-  plugins,
   actions,
 }) => {
   if (stage === "build-html") {
@@ -23,6 +21,12 @@ exports.onCreateWebpackConfig = ({
       },
     });
   }
+  const { setWebpackConfig } = actions;
+  setWebpackConfig({
+    externals: {
+      jquery: 'jQuery', // important: 'Q' capitalized
+    },
+  });
 };
 
 exports.createPages = ({ actions, graphql }) => {

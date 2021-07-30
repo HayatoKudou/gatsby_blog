@@ -19,6 +19,11 @@ export default class HTML extends React.Component {
           />
           <meta name="google-site-verification" content="sMQSrUF0XDtih2YvjDAQGWN4sSmoCbx4ngNnkhfd42s" />
           {this.props.headComponents}
+          <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossOrigin="anonymous"
+          />
         </head>
         <body {...this.props.bodyAttributes} className="light">
           {this.props.preBodyComponents}
