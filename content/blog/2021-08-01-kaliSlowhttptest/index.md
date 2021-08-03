@@ -67,7 +67,7 @@ service availableが**NO**になったら実際にページにアクセスして
 
 <video autoplay="" loop="" muted="" playsinline="" controls="" title="Launch your first VS Code extension video" style="width: 100%;">
   <!-- <source src="http://localhost:8000/kali_dos_log.mov" type="video/mp4">  -->
-  <source src="https://kudohayatoblog.com/kali_dos.mp4" type="video/mp4"> 
+  <source src="https://kudohayatoblog.com/kali_dos_log.mp4" type="video/mp4"> 
 </video>
 
 ### 検証結果 / 対策
