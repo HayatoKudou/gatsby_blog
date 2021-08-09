@@ -50,8 +50,8 @@ react-hook-formライブラリを用いて、バリデーション付きのフ�
 
         return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <input name="example" defaultValue="test" ref={register} />
-            <input name="exampleRequired" ref={register({ required: true })} />
+            <input name="example" defaultValue="test" />
+            <input name="exampleRequired" {...register('exampleRequired', { required: true })}/>
             {errors.exampleRequired && <span>This field is required</span>}
 
             <input type="submit" />
@@ -65,9 +65,16 @@ react-hook-formライブラリを用いて、バリデーション付きのフ�
     registerメソッドは、Refとバリデーションルールを登録することができます。<br>
     提供されているバリデーションルールは[公式](https://react-hook-form.com/jp/api/#register)を確認してください。
 
+    > react-hook-formが6.XXから7.0.0に更新され、重大な変更が加えられました。<br>
+    > すべてref={register}を次のように置き換える必要があります{...register('value_name')}<br><br>
+    > バージョン6.XX：<br>
+    > <input ref={register({ required: true })} name="test" /><br><br>
+    > バージョン7.0.X：<br>
+    > <input {...register('test', { required: true })} />
+
     ```javascript
-    <input name="example" defaultValue="test" ref={register} />
-    <input name="exampleRequired" ref={register({ required: true })} />
+    <input name="example" defaultValue="test" />
+    <input name="exampleRequired" {...register('exampleRequired', { required: true })} />
     ```
 
     バリデーションのエラーメッセージも設定できます。<br>
@@ -75,7 +82,7 @@ react-hook-formライブラリを用いて、バリデーション付きのフ�
     (エラーメッセージはerrorsオブジェクトのmessageに入ります。)
 
     ```javascript
-    <input name="exampleRequired" ref={register({ required: '入力必須です' })} />
+    <input name="exampleRequired" {...register('exampleRequired', { required: '入力必須です' })} />
     {errors.exampleRequired && <span>{errors.exampleRequired.message}</span>}
     ```
 
@@ -92,7 +99,7 @@ react-hook-formライブラリを用いて、バリデーション付きのフ�
     ルールをrequiredとmaxLengthを指定して試してみます。
 
     ```javascript
-    <input name="exampleRequired" ref={register({ required: true, maxLength: 5 })} />
+    <input name="exampleRequired" {...register('exampleRequired', { required: true, maxLength: 5 })} />
     {errors.exampleRequired?.type === "required" && "入力必須です。"}
     {errors.exampleRequired?.type === "maxLength" && "5文字以内で入力してください。"}
     ```
