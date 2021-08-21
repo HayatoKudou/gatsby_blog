@@ -1,4 +1,4 @@
-/* eslint-disable react/forbid-prop-types */
+/* eslint-disable */
 import React from 'react';
 import {
   Layout, Row, Col,

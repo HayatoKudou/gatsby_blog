@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, {useEffect, useState, useRef, createRef} from 'react';
 import SEO from '../../../../components/Seo';
 import { Layout, Row, Col } from 'antd';

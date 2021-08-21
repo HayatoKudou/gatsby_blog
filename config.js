@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = {
     pathPrefix: '',
     siteUrl: 'https://kudohayatoblog.com',
@@ -14,6 +15,7 @@ module.exports = {
         resume: 'resume',
         tag: 'tags',
         tools: 'tools',
+        yukari: '/other/yukari',
     },
     social: {
         github: 'https://github.com/HayatoKudou',
