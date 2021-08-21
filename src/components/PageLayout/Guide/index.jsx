@@ -101,7 +101,9 @@ export default function Guide() {
     }
 
     function saveGuideSetting(open){
-        localStorage.setItem('guide_show', open);
+        if (typeof window !== 'undefined') {
+            ocalStorage.setItem('guide_show', open);
+        }
         set_show(open);
     }
 
@@ -140,13 +142,15 @@ export default function Guide() {
         clearInterval(intervalRef.current);
         intervalRef.current = null;
     }, []);
-
-    const storage_show = localStorage.getItem('guide_show');
+    
     let guide_show;
-    if(storage_show){
-        guide_show = storage_show;
-    } else {
-        guide_show = show
+    if (typeof window !== 'undefined') {
+        const storage_show = localStorage.getItem('guide_show');
+        if(storage_show){
+            guide_show = storage_show;
+        } else {
+            guide_show = show
+        }
     }
 
     return (
