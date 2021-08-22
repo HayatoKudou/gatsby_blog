@@ -102,7 +102,7 @@ export default function Guide() {
 
     function saveGuideSetting(open){
         if (typeof window !== 'undefined') {
-            ocalStorage.setItem('guide_show', open);
+            localStorage.setItem('guide_show', open);
         }
         set_show(open);
     }
