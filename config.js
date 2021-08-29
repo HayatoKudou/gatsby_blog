@@ -61,6 +61,11 @@ module.exports = {
             description: 'Linuxは、オープンソースのオペレーティングシステム (OS) および IT インフラ基盤です。',
             color: '#000000',
         },
+        AWS: {
+            name: 'AWS',
+            description: 'AWS(Amazon Web Services)は、Amazon.comが提供しているクラウドコンピューティングサービスです。',
+            color: '#FF9900',
+        },
         GCP: {
             name: 'GCP',
             description: 'GCP (Google Cloud Platform) は、Googleが提供しているクラウドコンピューティングサービスです。',
@@ -80,6 +85,11 @@ module.exports = {
             name: 'NodeJs',
             description: 'Node.jsは、スケーラブルなネットワークアプリケーションを構築するために設計された非同期型のイベント駆動の JavaScript 環境です。',
             color: '#43853d',
+        },
+        Python: {
+            name: 'Python',
+            description: 'Pythonはインタープリタ型の高水準汎用プログラミング言語です。',
+            color: '#cc2336',
         },
     },
 };
