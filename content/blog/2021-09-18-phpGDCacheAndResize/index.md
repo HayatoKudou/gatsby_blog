@@ -38,11 +38,11 @@ phpinfo();
 そのため、キャッシュが存在する場合はキャッシュした画像を返し、キャッシュが存在しない場合は新たにリサイズした画像を返すような設計します。<br>
 <br>
 キャッシュの存在確認は、ファイル名のハッシュがキャッシュに存在するかで判断します。<br>
-(キャッシュの作成については後で解説します。)
+(キャッシュの作成については下で解説します。)
 
 ```php
 function getFilePath(){
-    $hash = $this->getHash($path_parts['basename']); // ファイル名でキャッシュ作成
+    $hash = $this->getHash($path_parts['basename']); // ファイル名でハッシュ作成
     $cache = \Cache::get($hash);
 
     if($cache && file_exists(storage_path('app/public/cache/'.$cache))) {
@@ -56,6 +56,14 @@ function getFilePath(){
 function getHash($string) {
     return sha1($string);
 }
+```
+
+リサイズした画像は /storage/app/public/cache/ 配下に設置しています。<br>
+設置場所は任意ですが、所有者は apache に変更しておいてください。
+
+```
+mkdir /storage/app/public/cache/
+chown apache:apache /storage/app/public/cache/
 ```
 
 ## 3. 関数の呼び出し / キャッシュセット
