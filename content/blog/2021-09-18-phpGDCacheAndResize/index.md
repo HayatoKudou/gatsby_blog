@@ -11,6 +11,10 @@ Laravelで画像を編集する場合、[InterventionImage](http://image.interve
 しかし環境によっては、パッケージを使用することができない場合や、PHP GDを使用することでメモリの消費を下げたい場合もあると思います。<br>
 昨今のサーバでは PHP GD がデフォルトで有効化されている場合が多いため、PHP GDでの画像編集方法をご紹介します。
 
+> 参考記事<br>
+> ・[PHPのGDライブラリが有効になっていない時の対処法](https://live-cast.asia/blog/2020/12/php-gd-enable-method.html)<br>
+> ・[PHP: GDで画像のサイズ変更やサムネイル生成のやりかた](https://qiita.com/suin/items/b01eebc05209dba0eb3e)
+
 ## 1. PHP GDが有効になっているか確認
 
 phpinfo で GD Support が enable になっていることを確認してください。<br>
@@ -53,6 +57,7 @@ function getFilePath(){
     return $file_path;
 }
 
+// ハッシュ作成
 function getHash($string) {
     return sha1($string);
 }
