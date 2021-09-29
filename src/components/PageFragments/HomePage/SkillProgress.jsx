@@ -32,7 +32,7 @@ const SkillsProgress = () => (
           text="AWS"
         />
         <ProgressBar
-          percent={30}
+          percent={20}
           text="Azure"
         />
       </Col>
@@ -54,7 +54,7 @@ const SkillsProgress = () => (
           text="Mysql"
         />
         <ProgressBar
-          percent={30}
+          percent={20}
           text="GCP"
         />
       </Col>
