@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { Layout } from 'antd';
 import { graphql } from 'gatsby';
@@ -10,18 +11,28 @@ import Config from '../../../config';
 import Utils from '../../utils/pageUtils';
 import Guide from '../../components/PageLayout/Guide';
 
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+import 'gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css'
+
 import 'prismjs/themes/prism-solarizedlight.css';
 import './highlight-syntax.less';
 import * as style from './post.module.less';
 
-const Post = ({ data }) => {
+const Post = ({ pageContext, location, data }) => {
+  console.log(pageContext)
+  console.log(location)
+  console.log(data)
   const { html, frontmatter } = data.markdownRemark;
   const {
     title, cover: { childImageSharp: { fluid } }, excerpt, path,
   } = frontmatter;
 
+  const {
+    breadcrumb: { crumbs },
+  } = pageContext
+
   var tags_name = [];
-  for(let key in Config.tags){
+  for (let key in Config.tags) {
     tags_name.push(key);
   }
 
@@ -41,6 +52,12 @@ const Post = ({ data }) => {
         />
         <Header />
         <SidebarWrapper>
+          <Breadcrumb
+            style={{fontSize: '1rem'}}
+            // crumbSeparator="/"
+            crumbs={crumbs}
+            crumbLabel={frontmatter.title}
+          />
           <div className="marginTopTitle">
             <h1>{title}</h1>
             <div className={style.bannerImgContainer}>

@@ -25,6 +25,7 @@
     "gatsby": "^3.10.2",
     "gatsby-image": "^3.10.0",
     "gatsby-plugin-antd": "^2.2.0",
+    "gatsby-plugin-breadcrumb": "^12.1.1",
     "gatsby-plugin-google-analytics": "^3.10.0",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-less": "^5.10.0",

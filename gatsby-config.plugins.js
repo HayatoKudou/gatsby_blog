@@ -1,3 +1,4 @@
+/* eslint-disable */
 const config = require('./config');
 
 module.exports = [
@@ -77,7 +78,7 @@ module.exports = [
     options: {
       // The property ID; the tracking code won't be generated without it
       trackingId: config.googleAnalyticTrackingId,
-      // Defines where to place the tracking script - `true` in the head and `false` in the body
+      // Defines where to place the tracking script - 'true' in the head and 'false' in the body
       head: false,
     },
   },
@@ -88,6 +89,33 @@ module.exports = [
       color: 'black',
       // Disable the loading spinner.
       showSpinner: true,
+    },
+  },
+
+  {
+    resolve: 'gatsby-plugin-breadcrumb',
+    options: {
+      useAutoGen: true,
+      autoGenHomeLabel: 'Home',
+      exclude: [
+        '**/dev-404-page/**',
+        '**/404/**',
+        '**/404.html',
+        '**/offline-plugin-app-shell-fallback/**',
+      ],
+      // isMatchOptions: optional, include this object to configure the wildcard-match library.
+      excludeOptions: {
+        separator: '.',
+      },
+      // crumbLabelUpdates: optional, update specific crumbLabels in the path
+      crumbLabelUpdates: [
+        {
+          pathname: '/blog',
+          crumbLabel: 'Blog',
+        },
+      ],
+      trailingSlashes: true,
+      usePathPrefix: '/blog',
     },
   },
 ];
