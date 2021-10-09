@@ -19,17 +19,11 @@ import './highlight-syntax.less';
 import * as style from './post.module.less';
 
 const Post = ({ pageContext, location, data }) => {
-  console.log(pageContext)
-  console.log(location)
-  console.log(data)
   const { html, frontmatter } = data.markdownRemark;
   const {
     title, cover: { childImageSharp: { fluid } }, excerpt, path,
   } = frontmatter;
-
-  const {
-    breadcrumb: { crumbs },
-  } = pageContext
+  const { breadcrumb: { crumbs } } = pageContext
 
   var tags_name = [];
   for (let key in Config.tags) {
@@ -53,8 +47,7 @@ const Post = ({ pageContext, location, data }) => {
         <Header />
         <SidebarWrapper>
           <Breadcrumb
-            style={{fontSize: '1rem'}}
-            // crumbSeparator="/"
+            style={{fontSize: '17px'}}
             crumbs={crumbs}
             crumbLabel={frontmatter.title}
           />

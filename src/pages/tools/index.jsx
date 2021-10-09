@@ -9,38 +9,48 @@ import SidebarWrapper from '../../components/PageLayout/Sidebar';
 import PostCard from '../../components/PostCard';
 import SEO from '../../components/Seo';
 import Guide from '../../components/PageLayout/Guide';
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+import 'gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css'
 
-const Tools = ({ data }) => (
-  <Layout className="outerPadding">
-    <Layout className="container">
-      <Header />
-      <SEO
-        title="Tools"
-        description="駆け出しエンジニアが、PHP・JavaScriptを中心に、WEB関連の技術をブログで発信しています。"
-        path="tools"
-        keywords={['駆け出しエンジニア', 'エンジニア', 'ブログ', 'PHP', 'Laravel', 'Javascript', 'ReactJS']}
-		
-      />
-      <SidebarWrapper>
-        <div className="marginTopTitle">
-          <h1 className="titleSeparate">Tools</h1>
-        </div>
-        <Row gutter={[20, 20]}>
-          {
-            data.allMarkdownRemark && data.allMarkdownRemark.edges.map((val, key) => {
-				return val.node.frontmatter.mode == 'tools' && (
-			 	  <Col key={key} xs={24} sm={24} md={12} lg={8}>
-					<PostCard data={val} />
-				  </Col>
-				)
-			})
-          }
-        </Row>
-      </SidebarWrapper>
-      <Guide />
+const Tools = ({ pageContext, location, data }) => {
+  const { breadcrumb: { crumbs } } = pageContext
+  return (
+    <Layout className="outerPadding">
+      <Layout className="container">
+        <Header />
+        <SEO
+          title="Tools"
+          description="駆け出しエンジニアが、PHP・JavaScriptを中心に、WEB関連の技術をブログで発信しています。"
+          path="tools"
+          keywords={['駆け出しエンジニア', 'エンジニア', 'ブログ', 'PHP', 'Laravel', 'Javascript', 'ReactJS']}
+
+        />
+        <SidebarWrapper>
+          <Breadcrumb
+            style={{ fontSize: '17px' }}
+            crumbs={crumbs}
+            crumbLabel={'Tools'}
+          />
+          <div className="marginTopTitle">
+            <h1 className="titleSeparate">Tools</h1>
+          </div>
+          <Row gutter={[20, 20]}>
+            {
+              data.allMarkdownRemark && data.allMarkdownRemark.edges.map((val, key) => {
+                return val.node.frontmatter.mode == 'tools' && (
+                  <Col key={key} xs={24} sm={24} md={12} lg={8}>
+                    <PostCard data={val} />
+                  </Col>
+                )
+              })
+            }
+          </Row>
+        </SidebarWrapper>
+        <Guide />
+      </Layout>
     </Layout>
-  </Layout>
-);
+  )
+};
 
 Tools.propTypes = {
   data: PropTypes.shape({

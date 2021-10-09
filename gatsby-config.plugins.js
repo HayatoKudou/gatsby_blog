@@ -96,26 +96,8 @@ module.exports = [
     resolve: 'gatsby-plugin-breadcrumb',
     options: {
       useAutoGen: true,
-      autoGenHomeLabel: 'Home',
-      exclude: [
-        '**/dev-404-page/**',
-        '**/404/**',
-        '**/404.html',
-        '**/offline-plugin-app-shell-fallback/**',
-      ],
-      // isMatchOptions: optional, include this object to configure the wildcard-match library.
-      excludeOptions: {
-        separator: '.',
-      },
-      // crumbLabelUpdates: optional, update specific crumbLabels in the path
-      crumbLabelUpdates: [
-        {
-          pathname: '/blog',
-          crumbLabel: 'Blog',
-        },
-      ],
-      trailingSlashes: true,
-      usePathPrefix: '/blog',
+      autoGenHomeLabel: 'Home', // トップページ
+      exclude: ['**/404/**',], // 除外ファイル
     },
   },
 ];
