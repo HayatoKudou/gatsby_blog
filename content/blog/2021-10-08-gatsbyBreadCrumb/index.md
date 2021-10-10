@@ -37,7 +37,8 @@ gatsby-config.js に gatsby-plugin-breadcrumb プラグインを追加します�
 
 ### 実装
 
-ここでは Breadcrumb をインポートし、引数に crumbs(pageContext値)と、crumbLabel(パンくず名)を渡しています。
+ここでは Breadcrumb をインポートし、引数に crumbs(context)と、crumbLabel(パンくず名)を渡しています。<br>
+(contextは gatsby-node.js ファイルの中でページを動的に作成する際に渡しているデータです)
 
 ```javascript
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
