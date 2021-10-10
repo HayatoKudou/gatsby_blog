@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -20,12 +21,17 @@ export default class Resume extends Component {
 
   render() {
     const { pageNumber, numPages } = this.state;
-    const pageToggle = () => {
-      if (pageNumber === 1) {
-        this.setState({ pageNumber: 2 });
-      } else {
-        this.setState({ pageNumber: 1 });
+    let number;
+    const pageToggle = (page) => {
+      if(page === 'Next Page'){
+        number = pageNumber + 1;
+      } else if(page === 'Previous Page'){
+        number = pageNumber - 1;
       }
+      if(number <= 0){
+        number = 1;
+      }
+      this.setState({ pageNumber: number });
       return 1;
     };
 
@@ -47,7 +53,23 @@ export default class Resume extends Component {
             <p>{`Page ${pageNumber} of ${numPages}`}</p>
           </Col>
           <Col span={2}>
-            <Button type="primary" onClick={pageToggle}>{pageNumber === 1 ? 'Next Page' : 'Previous Page'}</Button>
+            {pageNumber === 1 ? (
+              <Button type="primary" onClick={() => pageToggle('Next Page')}>{'Next Page'}</Button>
+            ) : pageNumber === 2 ? (
+              <div style={{display: "flex"}}>
+                <Button type="primary" onClick={() => pageToggle('Previous Page')} style={{marginRight: "10px"}}>{'Previous Page'}</Button>
+                <Button type="primary" onClick={() => pageToggle('Next Page')}>{'Next Page'}</Button>
+              </div>
+            ) : pageNumber === 3 ? (
+              <div style={{display: "flex"}}>
+                <Button type="primary" onClick={() => pageToggle('Previous Page')} style={{marginRight: "10px"}}>{'Previous Page'}</Button>
+                <Button type="primary" onClick={() => pageToggle('Next Page')}>{'Next Page'}</Button>
+              </div>
+            ) : pageNumber === 4 ? (
+              <Button type="primary" onClick={() => pageToggle('Previous Page')}>{'Previous Page'}</Button>
+            ) : (
+              <Button type="primary" onClick={() => pageToggle('Previous Page')}>{'Previous Page'}</Button>
+            )}
           </Col>
         </Row>
       </div>
