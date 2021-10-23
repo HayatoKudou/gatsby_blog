@@ -1,6 +1,6 @@
 ---
 title: "Apex Legends エーペックスレジェンズ掲示板"
-path: blog/apexBulletinBoard
+path: tools/apexBulletinBoard
 tags: [JavaScript, React]
 cover: ./apexLegends.jpeg
 date: 2021-03-27

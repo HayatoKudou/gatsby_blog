@@ -1,6 +1,6 @@
 ---
 title: "正規表現ツール"
-path: blog/regularExpression
+path: tools/regularExpression
 tags: [JavaScript, React]
 cover: ./reactRegex.png
 date: 2021-03-20

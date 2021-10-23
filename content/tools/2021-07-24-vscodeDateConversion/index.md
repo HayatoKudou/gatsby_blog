@@ -1,6 +1,6 @@
 ---
 title: "【VSCode】Date Conversion"
-path: blog/vscodeDateConversion
+path: tools/vscodeDateConversion
 tags: [JavaScript, TypeScript]
 cover: ./vscode.png
 date: 2021-07-24

@@ -24,6 +24,7 @@ const Post = ({ pageContext, location, data }) => {
     title, cover: { childImageSharp: { fluid } }, excerpt, path,
   } = frontmatter;
   const { breadcrumb: { crumbs } } = pageContext
+  console.log(crumbs)
 
   var tags_name = [];
   for (let key in Config.tags) {

@@ -1,6 +1,6 @@
 ---
 title: "【VSCode】Cat Gif Therapy"
-path: blog/vscodeCatTherapy
+path: tools/vscodeCatTherapy
 tags: [JavaScript, TypeScript]
 cover: ./vscode.png
 date: 2021-07-17
