@@ -121,7 +121,7 @@ $ tail -f storage/logs/laravel.log
 $ make supervisor-start
 ```
 
-1. supervisorステータス確認
+2. supervisorステータス確認
 
 **supervisord is running**と表示されていればOKです。
 
