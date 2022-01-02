@@ -47,6 +47,10 @@ const SkillsProgress = () => (
           percent={20}
           text="Redash"
         />
+        <ProgressBar
+          percent={20}
+          text="CircleCI"
+        />
       </Col>
       <Col xs={24} sm={24} md={12}>
         <ProgressBar
