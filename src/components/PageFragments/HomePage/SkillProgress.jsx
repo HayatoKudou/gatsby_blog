@@ -24,16 +24,28 @@ const SkillsProgress = () => (
           text="Redux"
         />
         <ProgressBar
-          percent={30}
+          percent={20}
           text="jQuery"
+        />
+        <ProgressBar
+          percent={40}
+          text="Serverless Framework"
         />
         <ProgressBar
           percent={40}
           text="AWS"
         />
         <ProgressBar
+          percent={40}
+          text="GitHub"
+        />
+        <ProgressBar
           percent={20}
-          text="Azure"
+          text="Jenkins"
+        />
+        <ProgressBar
+          percent={20}
+          text="Redash"
         />
       </Col>
       <Col xs={24} sm={24} md={12}>
@@ -42,7 +54,7 @@ const SkillsProgress = () => (
           text="PHP"
         />
         <ProgressBar
-          percent={65}
+          percent={70}
           text="Laravel"
         />
         <ProgressBar
@@ -54,8 +66,28 @@ const SkillsProgress = () => (
           text="Mysql"
         />
         <ProgressBar
-          percent={20}
+          percent={15}
+          text="Azure"
+        />
+        <ProgressBar
+          percent={15}
           text="GCP"
+        />
+        <ProgressBar
+          percent={30}
+          text="BackLog"
+        />
+        <ProgressBar
+          percent={20}
+          text="DataDog"
+        />
+        <ProgressBar
+          percent={20}
+          text="Sentry"
+        />
+        <ProgressBar
+          percent={20}
+          text="Pager Duty"
         />
       </Col>
     </Row>
