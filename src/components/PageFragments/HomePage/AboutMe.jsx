@@ -6,7 +6,7 @@ import { stripTags, domHtml } from '../../../utils/stripTags';
 import SEO from '../../Seo';
 
 const pageText = {
-  paraOne: `はじめまして、私は都内にあるベンチャー企業でwebエンジニアをしています。
+  paraOne: `はじめまして、私は都内のベンチャー企業でwebエンジニアをしています。
 メイン言語はPHPでLaravel・Reactを使用することが多いです。
 担当箇所は、詳細設計・実装・テスト・保守で、これまで幅広く開発に携わってきました。
 最近は何かとSPAアプリを作る機会が多く、このブログもGatsby+Reactで構築しています。`,
